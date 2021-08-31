@@ -78,7 +78,9 @@ class AppZdanie extends React.Component {
       items.forEach( kontakt => {
 
         let porownaj = kontakt.last_name.substring(0, szukaj.length ).toLowerCase(); 
-        if ( porownaj !== szukaj.toLowerCase() ) {
+        let porownaj_imie = kontakt.first_name.substring(0, szukaj.length ).toLowerCase(); 
+
+        if ( porownaj !== szukaj.toLowerCase() && porownaj_imie !== szukaj.toLowerCase()  ) {
           return; 
         } 
         else {
